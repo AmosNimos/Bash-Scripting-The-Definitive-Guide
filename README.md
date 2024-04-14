@@ -33,11 +33,12 @@ Use figlet or toilet to generate the name of the script in large letters, commen
 ```bash
 figlet "My Script" | sed 's/^/# /'
 ```
+```bash
 # ▙▗▌▌ ▌  ▞▀▖▞▀▖▛▀▖▜▘▛▀▖▀▛▘
 # ▌▘▌▝▞   ▚▄ ▌  ▙▄▘▐ ▙▄▘ ▌ 
 # ▌ ▌ ▌   ▖ ▌▌ ▖▌▚ ▐ ▌   ▌ 
 # ▘ ▘ ▘▀▀▀▝▀ ▝▀ ▘ ▘▀▘▘   ▘ 
-
+```
 **4. Print Help**
 
 Add a function to print the script's help information:
