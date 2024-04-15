@@ -39,7 +39,23 @@ figlet "My Script" | sed 's/^/# /'
 # ▌ ▌ ▌   ▖ ▌▌ ▖▌▚ ▐ ▌   ▌ 
 # ▘ ▘ ▘▀▀▀▝▀ ▝▀ ▘ ▘▀▘▘   ▘ 
 ```
-**4. Print Help**
+**4. Source External Scripts**
+
+In this section of your script, you should source external scripts that provide additional functionality. Use the full path to the script and include a comment explaining what it does, along with a link to the project page for reference.
+
+Example:
+
+```bash
+# Source external scripts for additional functionality
+
+# Get extract flags from arguments as variables using: https://github.com/AmosNimos/flag
+. /path/to/flag_utility
+flag_utility "$@"
+```
+
+Make sure to replace `/path/to/flag/utility` with the actual path to the external script in your system. This practice helps maintain transparency and allows users to understand the purpose of the sourced script.
+
+**5. Print Help**
 
 Add a function to print the script's help information:
 
@@ -66,22 +82,6 @@ EOF
 ```
 
 In this example, `cat << EOF` starts the heredoc, and `EOF` marks the end of the heredoc. The text between `EOF` and `EOF` will be treated as a multi-line string and printed by `cat`. You can adjust the help message content as needed.
-
-**5. Source External Scripts**
-
-In this section of your script, you should source external scripts that provide additional functionality. Use the full path to the script and include a comment explaining what it does, along with a link to the project page for reference.
-
-Example:
-
-```bash
-# Source external scripts for additional functionality
-
-# Get extract flags from arguments as variables using: https://github.com/AmosNimos/flag
-. /path/to/flag_utility
-flag_utility "$@"
-```
-
-Make sure to replace `/path/to/flag/utility` with the actual path to the external script in your system. This practice helps maintain transparency and allows users to understand the purpose of the sourced script.
 
 **6. Initializing Global Variables**
 
